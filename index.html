@@ -2,32 +2,57 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Portafolio</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de registro en Nucba</title>
 </head>
 
 <body>
+    <!-- Titulo principal -->
+    <header>
+        <h1>Curriculum Vitae de Lionel Messi</h1>
+    </header>
 
-  <header>
-    <nav>
+<h1>Formulario de registro</h1>
+<form>
 
-       <img src="/Imagenes/1005141-75885107.png" class="image" alt="Logo">
+<label for="name">Nombre:</label>
+<input type="text" name="name" id="name">
 
-       <button class="hamburger">&#9776;</button>
+<br>
+<br>
 
-      <ul class="ul">
-        <li><a href="#" class="li">Sobre mi</a></li>
-        <li><a href="#" class="li">Proyectos</a></li>
-        <li><a href="#" class="li">Contacto</a></li>
-      </ul>
+<label for="lastName">Apellido:</label>
+<input type="text" name="lastName" id="lastName">
 
-    </nav>
-  </header>
+<br>
+<br>
 
-  <main>
-  </main>
+<span>Modalidad de cursado:</span>
+<input type="radio" name="modality" id="onDemand">
+<label for="onDemand">On-Demand</label>
+<input type="radio" name="modality" id="live">
+<label for="live"> En vivo</label>
+<br>
+<br>
+
+<label for="email">Correo:</label>
+<input type="email" name="email" id="email">
+<br>
+<br>
+
+<input type="checkbox" name="wishToInformation" id="information">
+<label for="information">Deseo recibir informacion sobre nuevos posteos en la plataforma de Nucba</label>
+<br>
+<br>
+<input type="checkbox" name="conditionsAccepted" id="conditions">
+<label for="conditions">Declaro que lei los terminos y condiciones y estoy listo para convertirme en desarrollador web Full Stack</label>
+<br>
+<br>
+<button>Enviar</button>
+
+</form>
 
 </body>
 
