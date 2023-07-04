@@ -1,1 +1,1 @@
-Navbar
+Hero + About
