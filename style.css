@@ -1,13 +1,12 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Open+Sans:wght@800&family=Oswald:wght@500&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -37,17 +36,35 @@ nav {
   list-style: none;
 }
 
-.li {
+.underline-hover {
   color: white;
   font-size: 130%;
   display: flex;
   text-decoration: none;
   white-space: nowrap;
+  position: relative;
 }
 
-.li:hover {
-  color: rgb(96, 157, 207);
-  text-decoration: underline;
+.underline-hover::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -5px;
+  left: 50%;
+  background: linear-gradient(to right, rgb(148, 148, 197), rgb(213, 213, 231));
+  transition: width 0.2s ease-out;
+  transform: translateX(-50%);
+}
+
+.underline-hover:hover::before {
+  width: 100%;
+}
+
+.underline-hover:hover {
+  background: linear-gradient(to right, rgb(148, 148, 197), rgb(213, 213, 231));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hamburger {
@@ -59,36 +76,10 @@ nav {
   cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
-  .ul {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-    padding-left: 80%;
-  }
-
-  .show {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: black;
-    z-index: 1;
-  }
-
-  .show li {
-    margin-bottom: 10%;
-  }
-}
-
 main {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(59, 59, 68);
+  background-color: rgb(227, 231, 231);
 }
 
 main {
@@ -101,9 +92,10 @@ main {
 .presentacion {
   display: flex;
   width: 1000px;
-  height: 400px;
-  color: rgb(193, 202, 209);
-  margin-bottom: 100px;
+  height: 500px;
+  color: rgb(2, 5, 7);
+  padding-bottom: 100px;
+  gap: 50px;
 }
 
 .perfil {
@@ -114,7 +106,7 @@ main {
 }
 
 .perfil img {
-  height: 75%;
+  height: 90%;
   border-radius: 10px;
 }
 
@@ -125,7 +117,17 @@ main {
   flex-direction: column;
   gap: 30px;
   padding: 2%;
-  width: 60%;
+  width: 70%;
+  color: rgb(3, 14, 29);
+}
+
+.descripcion h1 {
+  font-style: oblique;
+  font-size: 30px;
+  background: linear-gradient(to right, rgb(56, 56, 95), rgb(4, 4, 46));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .accion ul {
@@ -138,11 +140,13 @@ main {
   width: 120px;
   display: flex;
   justify-content: center;
-  border: 0.1px solid rgb(193, 202, 209);
   border-radius: 30px;
-  color: rgb(193, 202, 209);
-  padding: 5px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(216, 224, 231);
+  padding: 10px;
   cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .mas-informacion {
@@ -150,28 +154,181 @@ main {
 }
 
 .mas-informacion:hover {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: 1px solid white;
+  transition: background-color 0.2s, color 0.2s, border 0.2s;
 }
 
 .contactame:hover {
-  background-color: black;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transition: background-color 0.2s, color 0.2s, border 0.2s;
 }
 
 .introduccion-servicios {
   background-color: black;
   width: 100vw;
-  height: 1000px;
+  
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.introduccion-servicios img {
+  width: 600px;
 }
 
 .servicios-descripcion {
-  width: 1000px;
-  height: 300px;
+  width: 800px;
+  
+  font-size: 21px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(193, 202, 209);
   text-align: center;
+  padding-top: 50px;
+  font-style: oblique;
 }
+
+#section-2 {
+  width: 100vw;
+ 
+  background-color: rgb(227, 231, 231);
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.que-obtendras {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.beneficios {
+  width: 1000px;
+ 
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.beneficio {
+  width: 33%;
+  display: flex;
+  height: 100%;
+  background-color: rgb(231, 237, 238);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+  border-radius: 30px;
+  padding: 15px;
+}
+
+.beneficio:hover {
+  background-color: rgb(26, 47, 59);
+  color: rgb(249, 251, 253);
+  transition: background 0.4s, color 0.4s;
+}
+
+.imagen-beneficio {
+  width: 30%;
+}
+
+.imagen-beneficio img {
+  width: 80%;
+}
+
+#section-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: black;
+  padding: 50px;
+}
+
+.contact-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen-contacto {
+  width: 20%;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imagen-contacto img {
+  width: 100%;
+}
+
+.contacto-info {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  color: rgb(246, 247, 248);
+}
+
+.nombre {
+  font-size: 20px;
+}
+
+.contact {
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+.redes {
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.instagram,
+.linkdin,
+.telefono {
+  width: 120px;
+  display: flex;
+  gap: 10px;
+}
+
+.link-redes {
+  color: white;
+}
+
+.instagram img {
+  width: 15%;
+}
+
+.linkdin img {
+  width: 17%;
+  border-radius: 2px;
+}
+
+.telefono img {
+  width: 16%;
+  border-radius: 3px;
+}
+
+footer {
+  height: 100px;
+  width: 100vw;
+  background-color: brown;
+}
+
+
