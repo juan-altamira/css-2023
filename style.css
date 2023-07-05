@@ -219,7 +219,7 @@ main {
   gap: 30px;
 }
 
-.beneficio {
+.beneficio, .beneficio3 {
   width: 33%;
   display: flex;
   height: 100%;
@@ -227,13 +227,27 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
   text-align: center;
   border-radius: 30px;
   padding: 15px;
 }
 
+.beneficio {
+  gap: 40px;
+}
+
+.beneficio3 {
+  gap: 28px;
+}
+
 .beneficio:hover {
+  background-color: rgb(11, 28, 37);
+  color: rgb(249, 251, 253);
+  transition: background 0.4s, color 0.4s;
+  cursor: pointer;
+}
+
+.beneficio3:hover {
   background-color: rgb(11, 28, 37);
   color: rgb(249, 251, 253);
   transition: background 0.4s, color 0.4s;
@@ -345,7 +359,6 @@ footer p {
   -webkit-text-fill-color: transparent;
   cursor: pointer;
 }
-
 
 
 
