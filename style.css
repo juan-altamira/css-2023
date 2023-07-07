@@ -184,7 +184,7 @@ main {
   font-style: oblique;
 }
 
-#section-2 {
+.section-2 {
   width: 100vw;
 
   background-color: rgb(227, 231, 231);
@@ -254,7 +254,7 @@ main {
   width: 80%;
 }
 
-#section-3 {
+.section-3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -351,8 +351,4 @@ footer p {
   -webkit-text-fill-color: transparent;
   cursor: pointer;
 }
-
-
-
-
 
