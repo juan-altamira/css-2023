@@ -162,8 +162,7 @@ main {
 
 .introduccion-servicios {
   background-color: black;
-  width: 100vw;
-
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,7 +186,7 @@ main {
 }
 
 .section-2 {
-  width: 100vw;
+  width: 100%;
   background-color: rgb(227, 231, 231);
   padding: 50px;
   display: flex;
@@ -208,7 +207,6 @@ main {
   display: flex;
   justify-content: center;
   gap: 30px;
-  
 }
 
 .beneficio,
@@ -222,7 +220,6 @@ main {
   text-align: center;
   border-radius: 30px;
   padding: 25px;
- 
 }
 
 .beneficio {
@@ -335,7 +332,7 @@ main {
 
 footer {
   padding: 35px;
-  width: 100vw;
+  width: 100%;
   background-color: rgb(3, 2, 5);
   display: flex;
   justify-content: center;
@@ -383,7 +380,7 @@ label img {
 
   .navbar-list {
     position: absolute;
-    top: 105px;
+    top: 102px;
     padding: 30px 0 30px 30px;
     width: 90%;
     flex-direction: column;
@@ -409,7 +406,6 @@ label img {
   .presentacion {
     justify-content: center;
     width: 100%;
-   
   }
 
   .accion {
@@ -418,7 +414,7 @@ label img {
     width: 100%;
   }
 
-  .descripcion  {
+  .descripcion {
     width: 100%;
     text-align: center;
     justify-content: center;
@@ -429,7 +425,6 @@ label img {
     display: none;
   }
 
-  
   .servicios-descripcion {
     width: 85%;
   }
@@ -438,7 +433,6 @@ label img {
     width: 100%;
   }
 
- 
   .que-obtendras {
     width: 130%;
   }
@@ -448,19 +442,18 @@ label img {
   }
 
   .beneficios {
-    padding: 25px 180px;
     flex-wrap: wrap;
+    width: 100%;
   }
 
-  .beneficio, .beneficio3 {
-    width: 50%;
+  .beneficio,
+  .beneficio3 {
+    width: 100%;
   }
 
   .imagen-contacto img {
     display: none;
   }
-
-  
 }
 
 
