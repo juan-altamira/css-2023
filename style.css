@@ -359,6 +359,22 @@ label img {
   display: none;
 }
 
+
+ .logo-contacto {
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  z-index: 2;
+  padding: 12px;
+  padding-bottom: 25px;
+
+} 
+
+ .logo-contacto img {
+  width: 150px;
+  border-radius: 0%;
+} 
+
 /* MEDIA QUERYS */
 @media (max-width: 992px) {
   nav {
@@ -454,9 +470,12 @@ label img {
   .imagen-contacto img {
     display: none;
   }
+
+  .logo-contacto img {
+    width: 100px;
+  } 
+
 }
-
-
 
 
 
