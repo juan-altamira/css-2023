@@ -3,211 +3,311 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Portafolio</title>
+    <link rel="stylesheet" href="CSS/style.css"/>
+    <link rel="icon" href="https://bitcoincash.org/img/bitcoin-cash-logo-wt.svg">
+    <title>Bitcoin Cash</title>
   </head>
-
   <body>
     <header>
-      <nav class="navbar">
-        <img src="/Imagenes/1005141-75885107.png" class="image" alt="Logo" />
-        
-        <label for="toggle-menu" class="menu-label">
-          <img
-            src="http://www.newdesignfile.com/postpic/2009/03/hamburger-menu-icon_354355.png"
-            alt="menuIcon"
-            class="menu-icon"
-          />
-        </label>
-        <input type="checkbox" id="toggle-menu" />
+      <div class="logo-principal">
+        <img
+          src="https://bitcoincash.org/img/bitcoin-cash-logo-horizontal-wt.svg"
+          alt="Logo Bitcoin Cash"
+        />
+      </div>
 
-        <ul class="navbar-list">
-          <li><a href="#" class="underline-hover">Sobre mi</a></li>
-          <li><a href="#benefits" class="underline-hover">Beneficios</a></li>
-          <li><a href="#contact-us" class="underline-hover">Contactame</a></li>
-        </ul>
-      </nav>
+      <div>
+        <nav>
+          <li class="list-nav">
+            <ul>
+              <a href="#que-es-bitcoin" class="underline-hover">¿Que es?</a>
+            </ul>
+            <ul>
+              <a href="#ventajas" class="underline-hover">Ventajas</a>
+            </ul>
+            <ul>
+              <a href="#como-usarlo" class="underline-hover">¿Como usarlo?</a>
+            </ul>
+            <ul>
+              <a href="#donde-conseguirlo" class="underline-hover">¿Como conseguirlo?</a>
+            </ul>
+            <ul>
+              <a href="#donde-usarlo" class="underline-hover">¿Donde usarlo?</a>
+            </ul>
+            <ul>
+              <a href="#recursos" class="underline-hover">Recursos</a>
+            </ul>
+          </li>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <section class="presentacion">
-        <div class="descripcion">
-          <h1>Codifica tu visión con pasión y precisión</h1>
-          <div>
-            Soy un apasionado de la programación y me emociona ayudarte a
-            convertir tus ideas en realidad. Con cada línea de código, busco
-            superar tus expectativas y crear soluciones tecnológicas
-            impactantes. Mi enfoque meticuloso y mi amor por la programación me
-            impulsan a ofrecerte resultados excepcionales. Juntos,
-            desbloquearemos el potencial de tu proyecto y lo llevaremos al
-            siguiente nivel!
-          </div>
-
-          <div class="accion">
-            <ul>
-              <li>
-                <a href="https://t.me/JuanPablo35" target="_blank" 
-                class="contactame">Contactame</a>
-              </li>
-              <li>
-                <a href="#contact-us" class="mas-informacion">Mas informacion</a>
-              </li>
-            </ul>
-          </div>
+      <!-- Primera Section -->
+      <section id="porque-bch">
+        <div class="container-principal">
+          <h1 class="bitcoin-cash">¿POR QUÉ BITCOIN CASH?</h1>
         </div>
 
-        <div class="perfil">
-          <img
-            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.norderbergs.com%2Fstorage%2F2020%2F09%2Fprofessional-web-design-social-ink-professional-web-design-png-1000_813.png&f=1&nofb=1&ipt=f452a2c002ae72a5bc6031d5f4af2ee47bd5cfb719807c16a59b7dd544e53a72&ipo=images"
-            alt="Foto de Perfil"
-          />
+        <div class="contain-image-blockchain">
+          <img src="https://i.ibb.co/Tgjq8fz/Blockchain.png" alt="blockchain" />
         </div>
       </section>
 
-      <section class="introduccion-servicios">
-        <p class="servicios-descripcion">
-          En mis servicios de desarrollo, la pasión se convierte en una fuerza
-          transformadora. Busco la excelencia en cada proyecto, porque sé que
-          los detalles marcan la diferencia. Mi compromiso es brindarte una
-          experiencia excepcional, donde tus metas se vuelvan realidad. Con mi
-          dedicación por aprender y mi deseo de mejorar la vida de los demás,
-          juntos crearemos soluciones tecnológicas impactantes que marcarán la
-          diferencia.
-        </p>
+      <!-- Segunda Section -->
+      <section id="que-es-bitcoin">
+        <h2>¿QUE ES BITCOIN CASH?</h2>
         <img
-          src="https://wallpapers.com/images/hd/blockchain-monochrome-earth-sphere-uknrsf6rlwtyahb9.jpg"
-          alt="blockchain"
+          src="https://i.ibb.co/3mKSPND/WP.png"
+          alt="Whitepaper de Bitcoin"
         />
+        <div class="contenedor-explicacion">
+          <p class="explicacion-bitcoin">
+            El proyecto de Bitcoin se hace funcional en 2009, tras la
+            publicacion del documento oficial titulado "Bitcoin: Una version de
+            dinero electronico en efectivo de persona a persona" diseñado por
+            una persona o grupo de personas bajo el pseudónimo de Satoshi
+            Nakamoto. Con el objetivo de crear un dinero digital incensurable
+            que no dependiera de ningún gobierno, empresa ni organización, con
+            el cual, puedas enviar dinero a cualquier parte del mundo de forma
+            directa y sin intermediarios, donde los usuarios sean los unicos
+            dueños de su dinero y nadie sin la clave privada de dicho usuario
+            pueda tocarlo.
+          </p>
+
+          <p class="explicacion-bitcoin">
+            Para lograr esto, el registro del dinero y de cada transacción se
+            almacena en una base de datos distribuida, es decir, que existen
+            millones de copias de esa base de datos almacenadas en computadoras
+            de todo el mundo. Al no existir una base central, no existe un punto
+            de ataque, ya que si alguien logra vulnerar alguna computadora donde
+            se almacena dicha base de datos y modifica la información, hay otras
+            millones de copias con la información correcta
+          </p>
+
+          <p class="explicacion-bitcoin">
+            Por otro lado, las personas que almacenan esa base de datos se
+            denominan "mineros" y ganan dinero resolviendo un cálculo matemático
+            muy complejo. Mientras más potentes sean sus computadoras o más
+            computadoras usen al mismo tiempo, más probabilidad hay de que lo
+            resuelvan y se lleven un premio. A su vez, mientras lo resuelven van
+            colocando todas las transacciones que les llegan, en un bloque. Por
+            ejemplo, si Juan le envia dinero a Carlos, esa es una transacción
+            que se almacena en el bloque. Quien resuelva el cálculo valida el
+            bloque con todas las transacciones dentro, llevándose el premio.
+            Mientras más computadoras compitan por resolver ese cálculo, más
+            complejo será y mientras menos computadoras haya compitiendo, más
+            sencillo se hace, de modo que solo pueda resolverlo uno cada 10
+            minutos aproximadamente
+          </p>
+
+          <p class="explicacion-bitcoin">
+            Ese premio consiste en una cantidad determinada de bitcoins que se
+            emiten, mas la comisión de todas las transacciones que entren en
+            dicho bloque y esa emisión de bitcoins cada 4 años se reduce a la
+            mitad hasta que eventualmente deje de existir y el beneficio se
+            remplace por cada ves mas numero de comisiones de mas personas que
+            empiece a usar la red.
+          </p>
+          <p class="explicacion-bitcoin">
+            La forma que tiene el usuario de controlar sus fondos, es a traves de lo que se conoce como clave privada o "frase semilla" (recorda bien estos nombres). Esa clave privada o frase semilla, consiste en 12 palabras que uno anota en un papel y siempre que quiere acceder a sus fondos desde una billetera diferente, solo debe escribirlas.
+          </p>
+        </div>
       </section>
 
-      <section class="section-2" id="benefits">
+      <!-- Tercera Section -->
+      <section id="ventajas">
         <div class="que-obtendras">
-          <h2>¿Que obtendras al trabajar conmigo?</h2>
+          <h2>¿Que ventajas ofrece?</h2>
         </div>
         <div class="beneficios">
-          <div class="beneficio">
-            <div class="imagen-beneficio">
-              <img
-                src="https://static.vecteezy.com/system/resources/previews/010/154/337/non_2x/check-mark-icon-sign-design-free-png.png"
-                alt="logo de verificacion"
-              />
-            </div>
-            <div><h3>Calidad excepcional</h3></div>
+          <div class="ventaja">
+            <div><h3>Incensurable e Inconfiscable</h3></div>
             <div>
-              Como desarrollador web apasionado, me esfuerzo por alcanzar los
-              más altos estándares de calidad en cada proyecto. Esto implica una
-              atención meticulosa a los detalles, código limpio y bien
-              estructurado, así como una dedicación constante a la mejora
-              continua.
+              Absolutamente nadie sin tu clave privada tiene la capacidad de
+              tocar tus fondos ni denegarte un pago
             </div>
           </div>
 
-          <div class="beneficio">
-            <div class="imagen-beneficio">
-              <img
-                src="https://images.vexels.com/media/users/3/143181/isolated/preview/c4b7177317fcd7daa9f02fcfc9ff2bfe-bombilla-encendida-by-vexels.png"
-                alt="logo de bombilla"
-              />
-            </div>
-            <div><h3>Soluciones innovadoras</h3></div>
+          <div class="ventaja">
+            <div><h3>Red Operativa 24/7</h3></div>
             <div>
-              Mi pasión por la programación y el diseño web me impulsa a buscar
-              constantemente nuevas soluciones y enfoques creativos para los
-              desafíos técnicos. Puedo ofrecer ideas frescas y perspectivas
-              innovadoras para optimizar y mejorar la funcionalidad de tu sitio
-              web.
+              Al ser una base de datos distribuida por todo el mundo, si una
+              computadora falla, existen cientos de miles que la siguen
+              corriendo
             </div>
           </div>
 
-          <div class="beneficio3">
-            <div class="imagen-beneficio">
-              <img
-                src="https://freeiconshop.com/wp-content/uploads/edd/handshake-outline-filled.png"
-                alt="logo de manos estrechandose"
-              />
+          <div class="ventaja-3">
+            <div>
+              <h3>Transacciones Instantaneas</h3>
             </div>
             <div>
-              <h3>Enfoque centrado en el cliente</h3>
+              Gracias a su amplia y creciente capacidad de procesar pagos, la
+              probabilidad de que tu transaccion sea aceptada en el siguiente
+              bloque es exageradamente alta, pudiendo trabajar con 0
+              confirmaciones de forma segura y permitiendo transacciones
+              instantaneas
+            </div>
+          </div>
+        </div>
+
+        <div class="beneficios">
+          <div class="ventaja">
+            <div><h3>Comisiones Insignificantes</h3></div>
+            <div>
+              Al mantener capacidades de procesamiento muy por encima de la
+              demanda real, cualquier transaccion que lleve un minimo de
+              comision sera incluida y aceptada
+            </div>
+          </div>
+
+          <div class="ventaja">
+            <div><h3>Poder enviar a cualquier rincón del mundo</h3></div>
+            <div>
+              Al ser una red global, distribuida por todo el mundo, no existen
+              fronteras. Para la red, es lo mismo una transaccion a tu vecino
+              que a la otra parte del mundo
+            </div>
+          </div>
+
+          <div class="ventaja-3">
+            <div>
+              <h3>Reserva de Valor</h3>
             </div>
             <div>
-              Mi objetivo es superar tus expectativas. Trabajaremos juntos para
-              comprender tus metas y adaptaré mi trabajo para superarlas.
-              Mantendremos una comunicación constante y un enfoque orientado a
-              resultados para asegurar el éxito de tu proyecto.
+              Gracias a diversos mecanismos, podes congelar de forma sencilla el
+              poder adquisitivo de tus monedas y anclarlo al precio del dolar,
+              euro, yuan, oro, plata, cobre, entre otros activos, de forma
+              nativa, sin salir de la red y aprovechando el resto de beneficios
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section-3" id="contact-us">
-        <div class="contact-me">
-          <div class="contacto-info">
-            <h3 class="contact">Contactame:</h3>
-            <div>
-              <h4 class="nombre">Juan Altamira</h4>
-              <div class="redes">
-                <div class="instagram">
-                  <img
-                    src="https://www.aesthetx.com/wp-content/uploads/2021/01/1200px-Instagram_logo_2016.svg-1-min.png"
-                    alt="Logo de instagram"
-                  />
-                  <a
-                    href="https://www.instagram.com/juampa.altamira/?next=%2F"
-                    class="link-redes"
-                    target="_blank"
-                    >Instagram</a
-                  >
-                </div>
-                <div class="linkdin">
-                  <img
-                    src="https://www.zoominfotech.com/wp-content/uploads/2018/01/linkedin-blue-style-logo-png-0-768x768.png"
-                    alt=""
-                  />
-                  <a
-                    href="https://www.linkedin.com"
-                    class="link-redes"
-                    target="_blank"
-                    >Linkedin</a
-                  >
-                </div>
-                <div class="telefono">
-                  <img
-                    src="http://www.clipartbest.com/cliparts/Kcj/o9G/Kcjo9GnBi.png"
-                    alt=""
-                  />
-                  <a
-                    href="https://t.me/JuanPablo35"
-                    target="_blank"
-                    class="link-redes"
-                    >Teléfono</a
-                  >
-                </div>
+      <!-- Como usarlo -->
+      <section id="como-usarlo">
+        <div class="container">
+          <h2>¿Como Usarlo?</h2>
+          <div class="explicacion-de-uso">
+            <p class="explicacion-texto">
+              El primer paso, logicamente, es obtener una billetera (wallet),
+              que es una aplicaccion que te permite acceder y utilizar tus fondos. En el mercado hay infinidad de billeteras, lo
+              recomendable es elegir aquellas que sean de codigo abierto, asi la
+              comunidad puede ver exactamente como funciona y asegurarse de que
+              no haya cosas raras.
+              <b>Es importante tener en cuenta que tus bitcoins estan almacenados en esa base de datos distribuida llamada blockchain, no aca. Por lo tanto, si se borra la aplicacion, seguis teniendo acceso a tus fondos mientras conserves tu frase semilla, la cual, podes colocar en cualquier otra app y veras reflejado el mismo dinero que tenias en la app anterior. Por lo tanto, lo primero que veras al descargar la billetera de tu tienda de aplicaciones es un menu donde puedas elegir si crear una nueva frase semilla o importar una que ya tengas. Destacar que esta frase, se genera de forma local en tu dispositivo y nadie mas que vos la conoce</b>
+            </p>
+
+            <p class="explicacion-texto">
+              Mi recomendacion personal es Selene Wallet, una aplicacion de
+              codigo abierto y libre, enfocada en la facilidad de uso y
+              velocidad de pago, al punto de que cualquier persona
+              independientemente de su experiencia sepa usarla y puedas enviar
+              una transaccion en 3 segundos desde que abres la aplicacion hasta
+              que se envia el pago.
+            </p>
+            <div class="contenedor-imagen">
+              <img
+                src="https://i.ibb.co/6wWp2H6/selenecash.jpg"
+                alt="Imagen de inicio en Selene Wallet"/>
+                <img src="https://i.ibb.co/8mWCTZJ/Selenee2.jpg" alt="Seccion de envio en Selene Wallet">
+              </div>
+                <div class="explicacion-de-imagen">
+                <p>
+                  Lo primero que ves en la imagen es un QR, cualquiera que lo
+                  escanee, puede enviarte un pago. Por otro lado, si miras en la
+                  esquina inferior derecha, veras un logo que dice "Enviar". Si
+                  tenes la direccion del destinatario copiada con tu celular y tocas ahi, te llevara al menu para enviar el dinero. Solo
+                  debes poner el monto y enviarlo.
+            
+                  En el medio, tenes la opcion de escanear, de modo que tambien
+                  que accederas al menu de envio pero escaneando el codigo de
+                  otro.
+            
+                  Por ultimo, tenes el boton "Historial" para ver el historial de transacciones.
+                </p>
+                <p><b>IMPORTANTE:</b>Para acceder a tu frase semilla compuesta por 12 palabras tenes que tocar la ranura de ajustes, luego "Cartera" y por ultimo "Main". Una ves ahi, le das un toque donde dice "ver frase de recuperacion de la billetera" y anotas en un papel esas 12 palabras.</p>
               </div>
             </div>
-            <div></div>
-          </div>
-
-          <div class="imagen-contacto">
-            <img
-              src="https://www.lernvid.com/wp-content/uploads/2020/09/contact.png"
-              alt="logo contacto"
-            />
           </div>
         </div>
+      </section>
+
+      <!-- Donde conseguirlo -->
+      <section id="donde-conseguirlo">
+        <h2 class="comprar">
+          ¿Donde lo consigo?
+        </h2>
+        <div class="donde-lo-consigo">
+          <div class="opcion">
+            <div class="peer-to-peer">
+              <img
+              src="https://freeiconshop.com/wp-content/uploads/edd/handshake-outline-filled.png"
+              alt="logo de manos estrechandose"
+            />
+            </div>
+            <div><h2>Persona a persona</h2></div>
+            <div>
+              Es la forma mas recomendada y consiste en que una persona te los envie directamente por la venta de algun bien o servicio, aunque tambien podes cambiarlo directamente por pesos a alguien que desee vendertelos
+            </div>
+          </div>
+          
+          <div class="opcion">
+            <div class="peer-to-peer">
+              <img
+              src="https://www.movedemocracy.org/wp-content/uploads/2017/10/institution-icon.png"
+              alt="exchange"
+            />
+            </div>
+            <div><h2>Plataformas de intercambio</h2></div>
+            <div>
+              Otro metodo muy comun es utilizar plataformas especializadas en la compra y venta de criptomonedas, como Mexc o Kukoin. Si bien son seguras, es importante utilizar aquellas que no te pidan tus datos personales y retirar tus monedas inmediatamente hacia tu billetera de Selene, Zapit o la que uses, que es ahi donde realmente tenes el control. Podes buscar un tutorial en youtube para comprar en la plataforma que desees
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comercios que acpetan -->
+      <section id="donde-usarlo">
+        <div class="comercios">
+          <h2>¿Donde puedo pagar con Bitcoin Cash?</h2>
+          <img src="https://i.ibb.co/sQJk7Nd/map-bitcoin.png" alt="Comercios que aceptan Bitcoin Cash">
+          <div>
+            <a href="https://map.bitcoin.com/" class="accede-aca" target="_blank">👉 ACCEDE AL MAPA COMPLETO PARA VER TU LOCALIDAD 👈</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recursos -->
+      <section id="recursos">
+        <div class="seccion-recursos">
+          <h2>Recursos:</h2>
+        </div>
+        <div class="links-recursos">
+          <div class="caja-padre-recursos">
+            <div class="container-caja-hija"><a href="https://t.me/BCHArgentina" target="_blank" class="caja-hija-recursos">Grupo de Telegram: Bitcoin Cash Argentina</a></div>
+
+            <div class="container-caja-hija"><a href="https://t.me/SeleneWallet" target="_blank" class="caja-hija-recursos">Grupo de Telegram: Selene Wallet</a></div>
+
+            <div class="container-caja-hija"><a href="https://www.youtube.com/watch?v=Vq9bCuM0YQ8" target="_blank" class="caja-hija-recursos">Documental: Porque Bitcoin Cash y no BTC</a></div>
+
+            <div class="container-caja-hija"><a href="https://www.youtube.com/@LaEconomiaP2P" target="_blank" class="caja-hija-recursos">Podcast sobre Bitcoin Cash</a></div>
+
+            <div class="container-caja-hija"><a href="/registro.html" target="_blank" class="caja-hija-recursos">Suscribete al Newsletter</a></div>
+          </div>
+
+          <div class="imagen-recursos">
+            <img src="https://bitcoincash.org/img/bitcoin-cash-logo-wt.svg" alt="logo de bitcoin cash">
+          </div>
+        </div>
+
       </section>
     </main>
 
-    <footer><p>Juan Developer</p></footer>
-
-    <div class="logo-contacto">
-      <a href="https://t.me/JuanPablo35" target="_blank">
-        <img
-          src="https://1000marcas.net/wp-content/uploads/2021/06/Telegram-logo.png"
-        />
-      </a>
-    </div>
+    <footer><p>"Un mundo sin fronteras, una moneda libre y universal"</p></footer>
+    </main>
   </body>
 </html>
-
 
 
