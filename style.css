@@ -1,82 +1,498 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Open+Sans:wght@800&family=Oswald:wght@500&display=swap');
-
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Oswald', sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
 }
 
-nav {
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: black;
-padding: 0.5% 0%;
-padding-right: 20%;
-padding-left: 5%;
+/* ------------------ Aca comienza el Navbar ------------------*/
+header {
+  background-color: black;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  position: fixed;
+  z-index: 2;
+  top: 0;
 }
 
-.image {
-width: 100px;
+header img {
+  width: 250px;
 }
 
-.ul {
-display: flex;
-gap: 20%;
-list-style: none;
+.list-nav {
+  display: flex;
+  gap: 30px;
 }
 
-.li {
-color: white;
-font-size: 130%;
-display: flex;
-text-decoration: none;
-white-space: nowrap;
+.underline-hover {
+  color: white;
+  font-size: 110%;
+  display: flex;
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
 }
 
-.li:hover {
-color: rgb(96, 157, 207);
-text-decoration: underline;
+.underline-hover::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -5px;
+  left: 50%;
+  background: linear-gradient(to right, rgb(23, 219, 151), rgb(133, 214, 183));
+  transition: width 0.2s ease-out;
+  transform: translateX(-50%);
 }
 
-.hamburger {
-display: none;
-color: white;
-font-size: 200%;
-border: none;
-background-color: transparent;
-cursor: pointer;
+.underline-hover:hover::before {
+  width: 100%;
 }
 
-@media screen and (max-width: 600px) {
-.ul {
-display: none;
-}
-.hamburger {
-display: block;
-padding-left: 80%;
-}
-.show {
-display: flex;
-flex-direction: column;
-position: absolute;
-top: 100%;
-left: 0;
-width: 100%;
-background-color: black;
-z-index: 1;
-}
-.show li {
-margin-bottom: 10%;
+.underline-hover:hover {
+  background: linear-gradient(to right, rgb(23, 219, 151), rgb(133, 214, 183));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-}
+/*------------------ Aca comienza el Main ------------------*/
 
 main {
-width: 100vw;
-height: 100vh;
-background-color: rgb(78, 78, 97);
+  background-color: rgb(10, 10, 10);
 }
+
+#porque-bch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+}
+
+.container-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bitcoin-cash {
+  color: rgb(23, 219, 151);
+  font-size: 50px;
+  text-align: center;
+  position: absolute;
+  top: 400px;
+}
+
+.contain-image-blockchain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.07;
+}
+
+.contain-image-blockchain img {
+  width: 1200px;
+}
+
+/* ---------- Que es Bitcoin Cash ---------- */
+
+#que-es-bitcoin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+}
+
+#que-es-bitcoin h2 {
+  text-align: center;
+  font-size: 35px;
+  color: rgb(23, 219, 151);
+  padding-bottom: 40px;
+}
+
+#que-es-bitcoin img {
+  opacity: 0.03;
+  width: 900px;
+  position: absolute;
+}
+
+.contenedor-explicacion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 2px solid rgb(23, 219, 151);
+  padding: 35px;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+  width: 60%;
+}
+
+.explicacion-bitcoin {
+  width: 100%;
+  text-align: justify;
+  font-weight: 600;
+  color: rgb(207, 226, 216);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+/* ---------- Beneficios ---------- */
+
+#ventajas {
+  width: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.que-obtendras {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  color: rgb(23, 219, 151);
+}
+
+.beneficios {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.ventaja,
+.ventaja-3 {
+  width: 33%;
+  display: flex;
+  background-color: rgb(8, 15, 10);
+  color: rgb(255, 255, 255);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 30px;
+  padding: 25px;
+}
+
+.ventaja {
+  gap: 40px;
+}
+
+.ventaja-3 {
+  gap: 28px;
+}
+
+.ventaja:hover {
+  background-color: rgb(23, 219, 151);
+  color: rgb(0, 0, 0);
+  transition: background 0.4s, color 0.4s;
+  cursor: pointer;
+  -webkit-transition: background 0.4s, color 0.4s;
+  -moz-transition: background 0.4s, color 0.4s;
+  -ms-transition: background 0.4s, color 0.4s;
+  -o-transition: background 0.4s, color 0.4s;
+}
+
+.ventaja-3:hover {
+  background-color: rgb(23, 219, 151);
+  color: rgb(0, 0, 0);
+  transition: background 0.4s, color 0.4s;
+  cursor: pointer;
+}
+
+/* ---------- Como usarlo ---------- */
+
+#como-usarlo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+}
+
+.container h2 {
+  color: rgb(23, 219, 151);
+  padding: 40px 0 40px 0;
+}
+
+.explicacion-de-uso {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.explicacion-texto {
+  width: 100%;
+  text-align: justify;
+  font-weight: 600;
+  color: rgb(207, 226, 216);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+.explicacion-texto b {
+  font-style: italic;
+  font-weight: 500;
+  color: rgb(140, 233, 191);
+}
+
+.explicacion-de-imagen {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.contenedor-imagen img {
+  width: 350px;
+}
+
+.explicacion-de-imagen p {
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: justify;
+}
+
+.explicacion-de-imagen b {
+  color: rgb(255, 74, 74);
+}
+#donde-conseguirlo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comprar {
+  color: rgb(23, 219, 151);
+  padding: 150px 0 40px 0;
+}
+
+.donde-lo-consigo {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.peer-to-peer img {
+  width: 80px;
+}
+
+.opcion {
+  width: 50%;
+  display: flex;
+  background-color: rgb(58, 168, 130);
+  color: rgb(0, 0, 0);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 30px;
+  padding: 25px;
+}
+
+.opcion {
+  gap: 40px;
+}
+
+.opcion:hover {
+  background-color: rgb(8, 15, 10);
+  color: rgb(255, 255, 255);
+  transition: background 0.4s, color 0.4s;
+  cursor: pointer;
+  -webkit-transition: background 0.4s, color 0.4s;
+  -moz-transition: background 0.4s, color 0.4s;
+  -ms-transition: background 0.4s, color 0.4s;
+  -o-transition: background 0.4s, color 0.4s;
+}
+
+/* ---------- Comercios que aceptan ---------- */
+.comercios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding-top: 100px;
+}
+
+.comercios h2 {
+  color: rgb(23, 219, 151);
+}
+
+.comercios img {
+  width: 800px;
+}
+
+.accede-aca {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  background-color: rgb(5, 58, 33);
+  color: white;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  padding: 20px;
+  font-weight: 600;
+}
+
+.accede-aca:hover {
+  background-color: rgb(23, 219, 151);
+  color: rgb(2, 31, 17);
+}
+
+/* ---------- Recursos ---------- */
+
+#recursos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 100px 0 100px 0;
+  gap: 75px;
+}
+
+.seccion-recursos {
+  color: rgb(23, 219, 151);
+  font-size: 20px;
+}
+
+.imagen-recursos img {
+  width: 400px;
+}
+
+.links-recursos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 150px;
+}
+
+.caja-padre-recursos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.container-caja-hija {
+  background-color: #0ac18e;
+  padding: 15px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.caja-hija-recursos {
+  color: rgb(4, 10, 6);
+}
+
+/* footer */
+
+footer {
+  padding: 35px;
+  width: 100%;
+  background-color: rgb(3, 2, 5);
+  display: flex;
+  justify-content: center;
+  font-size: 23px;
+  font-family: "Pacifico", cursive;
+  border-top: 1px solid rgb(16, 16, 17);
+  font-style: oblique;
+}
+
+footer p {
+  background: linear-gradient(to right, #30ff97, rgb(225, 235, 231));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
+/* Formulario de registro */
+
+.contenedor-formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 400px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
+
+
 
