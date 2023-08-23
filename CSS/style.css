@@ -20,15 +20,37 @@ header {
   position: fixed;
   z-index: 2;
   top: 0;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
-header img {
+header .logo-bch-escritorio {
   width: 250px;
 }
 
-.list-nav {
+.navbar-list {
   display: flex;
   gap: 30px;
+}
+
+.navbar {
+  display: flex;
+}
+
+/* Logo del Menu Hamburgesa */
+.navbar img {
+  display: none;
+  width: 50px;
+}
+
+/* Logo principal que aparece en dispositivos moviles */
+.logo-principal .logo-bch-responsive {
+  display: none;
+  width: 110px;
+}
+
+/* Ocultando el checkbox */
+#toggle-menu {
+  display: none;
 }
 
 .underline-hover {
@@ -273,8 +295,15 @@ main {
   flex-direction: column;
 }
 
+.contenedor-imagen {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
 .contenedor-imagen img {
   width: 350px;
+
 }
 
 .explicacion-de-imagen p {
@@ -414,7 +443,6 @@ main {
   gap: 15px;
 }
 
-
 .caja-hija-recursos {
   color: rgb(2, 44, 16);
   font-size: 18px;
@@ -455,6 +483,55 @@ footer p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1300px) {
+  header {
+    padding: 20px 30px;
+  }
+
+  #que-es-bitcoin {
+    height: 140vh;
+  }
+
+}
+
+@media (max-width: 1175px) {
+  .navbar ul {
+    background: rgb(0, 0, 0);
+    height: calc(60vh - 100px);
+    position: absolute;
+    top: 90px;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly ;
+    display: none;
+    width: 100%;
+    padding: 35px 0;
+}
+
+  .navbar img {
+    display: block;
+  }
+
+  #toggle-menu:checked ~ .navbar-list {
+    display: flex;
+   
+}
+
+  .logo-bch-escritorio {
+    display: none;
+  }
+
+  .logo-principal .logo-bch-responsive {
+    display: block;
+  }
+
+  .explicacion-de-imagen {
+    flex-wrap: wrap;
+  }
 }
 
 
