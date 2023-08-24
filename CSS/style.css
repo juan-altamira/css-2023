@@ -99,10 +99,8 @@ main {
   align-items: center;
   position: relative;
   height: 100vh;
-
-
 }
- 
+
 .container-principal {
   display: flex;
   justify-content: center;
@@ -532,7 +530,15 @@ footer p {
     display: none;
     width: 100%;
     padding: 35px 0;
-  }
+    display: grid;
+    place-items: center;
+    clip-path: circle(0% at top right);
+    transition: clip-path 0.5s;
+    -webkit-transition: clip-path 0.5s;
+    -moz-transition: clip-path 0.5s;
+    -ms-transition: clip-path 0.5s;
+    -o-transition: clip-path 0.5s;
+}
 
   .navbar img {
     display: block;
@@ -540,6 +546,7 @@ footer p {
 
   #toggle-menu:checked ~ .navbar-list {
     display: flex;
+    clip-path: circle(150% at top right);
   }
 
   .contain-image-blockchain img {
@@ -661,6 +668,5 @@ footer p {
     flex-wrap: wrap;
   }
 }
-
 
 
