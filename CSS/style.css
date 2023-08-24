@@ -9,6 +9,10 @@
 }
 
 /* ------------------ Aca comienza el Navbar ------------------*/
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 65px;
+}
 
 header {
   background-color: black;
