@@ -9,6 +9,7 @@
 }
 
 /* ------------------ Aca comienza el Navbar ------------------*/
+
 header {
   background-color: black;
   width: 100%;
@@ -98,8 +99,10 @@ main {
   align-items: center;
   position: relative;
   height: 100vh;
-}
 
+
+}
+ 
 .container-principal {
   display: flex;
   justify-content: center;
@@ -134,7 +137,6 @@ main {
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 100vh;
 }
 
 #que-es-bitcoin h2 {
@@ -190,6 +192,7 @@ main {
   display: flex;
   justify-content: center;
   color: rgb(23, 219, 151);
+  text-align: center;
 }
 
 .beneficios {
@@ -201,8 +204,8 @@ main {
 
 .ventaja,
 .ventaja-3 {
-  width: 33%;
   display: flex;
+  width: 33%;
   background-color: rgb(8, 15, 10);
   color: rgb(255, 255, 255);
   flex-direction: column;
@@ -237,6 +240,10 @@ main {
   color: rgb(0, 0, 0);
   transition: background 0.4s, color 0.4s;
   cursor: pointer;
+  -webkit-transition: background 0.4s, color 0.4s;
+  -moz-transition: background 0.4s, color 0.4s;
+  -ms-transition: background 0.4s, color 0.4s;
+  -o-transition: background 0.4s, color 0.4s;
 }
 
 /* ---------- Como usarlo ---------- */
@@ -303,7 +310,6 @@ main {
 
 .contenedor-imagen img {
   width: 350px;
-
 }
 
 .explicacion-de-imagen p {
@@ -321,6 +327,9 @@ main {
 .explicacion-de-imagen b {
   color: rgb(255, 74, 74);
 }
+
+/* ---------- Donde usarlo ---------- */
+
 #donde-conseguirlo {
   display: flex;
   flex-direction: column;
@@ -333,7 +342,8 @@ main {
 }
 
 .donde-lo-consigo {
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -382,6 +392,7 @@ main {
 
 .comercios h2 {
   color: rgb(23, 219, 151);
+  text-align: center;
 }
 
 .comercios img {
@@ -483,9 +494,11 @@ footer p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: pointer;
+  text-align: center;
 }
 
 /* ---------- Responsive ---------- */
+
 @media (max-width: 1300px) {
   header {
     padding: 20px 30px;
@@ -495,6 +508,15 @@ footer p {
     height: 140vh;
   }
 
+  .beneficios {
+    width: 50%;
+    flex-wrap: wrap;
+  }
+
+  .ventaja,
+  .ventaja-3 {
+    width: auto;
+  }
 }
 
 @media (max-width: 1175px) {
@@ -506,11 +528,11 @@ footer p {
     right: 0;
     flex-direction: column;
     align-items: center;
-    justify-content:space-evenly ;
+    justify-content: space-evenly;
     display: none;
     width: 100%;
     padding: 35px 0;
-}
+  }
 
   .navbar img {
     display: block;
@@ -518,8 +540,34 @@ footer p {
 
   #toggle-menu:checked ~ .navbar-list {
     display: flex;
-   
-}
+  }
+
+  .contain-image-blockchain img {
+    display: none;
+  }
+
+  .imagen-whitepaper {
+    display: none;
+  }
+
+  .bitcoin-cash {
+    position: static;
+    font-size: 40px;
+  }
+
+  #que-es-bitcoin {
+    position: static;
+    justify-content: initial;
+    height: auto;
+  }
+
+  #que-es-bitcoin h2 {
+    font-size: 40px;
+  }
+
+  #que-es-bitcoin img {
+    position: static;
+  }
 
   .logo-bch-escritorio {
     display: none;
@@ -529,7 +577,87 @@ footer p {
     display: block;
   }
 
-  .explicacion-de-imagen {
+  .contenedor-explicacion {
+    width: 60%;
+    border: none;
+    padding: 0px;
+  }
+
+  .explicacion-bitcoin {
+    font-size: 16px;
+    border: 2px solid rgb(23, 219, 151);
+    padding: 20px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+  }
+
+  .beneficios {
+    width: 60%;
+    flex-wrap: wrap;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  .explicacion-de-uso {
+    width: 100%;
+  }
+
+  .contenedor-imagen img {
+    width: 80%;
+  }
+
+  .donde-lo-consigo {
+    flex-wrap: wrap;
+  }
+
+  .opcion {
+    width: 80%;
+  }
+
+  #donde-usarlo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .comercios {
+    width: 90%;
+  }
+
+  .comercios img {
+    width: 100%;
+  }
+
+  .imagen-recursos img {
+    display: none;
+  }
+
+  .links-recursos {
+    gap: 0;
+  }
+
+  .caja-padre-recursos {
+    width: 100vw;
+  }
+
+  footer p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 740px) {
+  .contenedor-explicacion {
+    width: 85%;
+    border: none;
+    padding: 0px;
+  }
+
+  .beneficios {
+    width: 100%;
     flex-wrap: wrap;
   }
 }
