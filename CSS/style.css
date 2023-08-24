@@ -518,6 +518,10 @@ footer p {
 }
 
 @media (max-width: 1175px) {
+   header {
+    padding-left: 15px;
+  }
+  
   .navbar ul {
     background: rgb(0, 0, 0);
     height: calc(60vh - 100px);
