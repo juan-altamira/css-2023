@@ -1,7 +1,7 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/css", "dest": "Documentos/Proyecto/Integrador CSS/index-integrador.html" },
+    { "src": "/css", "dest": "Documentos/Proyecto/Integrador CSS/index.html" },
     { "src": "/javascript", "dest": "Documentos/Proyecto/Practico de Javascript/index-practico.html" }
   ]
 }
