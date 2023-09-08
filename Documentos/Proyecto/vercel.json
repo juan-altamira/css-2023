@@ -1,7 +1,7 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/integrador", "dest": "/integrador CSS/index.html" },
+    { "src": "/integrador", "dest": "/Integrador CSS/index.html" },
     { "src": "/practico", "dest": "/Practico de Javascript/index.html" }
   ]
 }
