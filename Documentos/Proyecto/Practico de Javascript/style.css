@@ -1,32 +1,76 @@
-* {
-  font-family: sans-serif;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+body {
+   margin: 0;
+   padding: 0;
+   font-size: 30px;
 }
 
 .container {
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  flex-direction: column;
-  background-color: rgb(10, 2, 1);
-  height: 100vh;
-  gap: 10px;
-  
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: black;
+   width: 100vw;
+   height: 100vh;
+}
+.contain {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 900px;
+   height: 400px;
+   background-color: rgb(248, 206, 128);
+   border-radius: 20px;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   -ms-border-radius: 20px;
+   -o-border-radius: 20px;
 }
 
-.primer-entrega {
-  color: white;
-  font-size: 50px;
-
+form {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
 }
 
-.javascript {
-  color: rgb(252, 215, 5);
-  font-size: 80px;
-  font-weight: 600;
-  font-style: italic;
- 
+input {
+   height: 10px;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+   padding: 10px;
 }
 
+button {
+   height: 35px;
+   color: rgb(255, 255, 255);
+   background-color: black;
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+}
+
+button:hover {
+   background-color: rgb(248, 206, 128);
+   color: black;
+}
+
+.card {
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   padding: 10px;
+   margin-top: 10px;
+}
+
+.error {
+   color: red;
+   margin-top: 10px;
+}
+
+.pizza-image {
+  width: 150px; 
+  height: auto;
+ }
