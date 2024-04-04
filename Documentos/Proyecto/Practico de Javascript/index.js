@@ -1,114 +1,98 @@
-//1- Crear una función que reciba un número por parámetro e indique en consola si el número es par o impar.
+const pizzas = [
+   {
+      id: 1,
+      nombre: "pizza de Muzzarella",
+      precio: 500,
+      ingredientes: ["Muzzarella", "Tomate", "Aceitunas"],
+      imagen: "https://i.ibb.co/PQJR7R7/muzzarella.png",
+   },
 
-function parImpar(name) {
-   if (name % 2 === 0) {
-      console.log("Es par");
-   } else {
-      console.log("Es impar");
-   }
-}
+   {
+      id: 2,
+      nombre: "pizza de Cebolla",
+      precio: 1500,
+      ingredientes: ["Muzzarella", "Tomate", "Cebolla"],
+      imagen: "https://i.ibb.co/xLHkT54/cebolla.png",
+   },
 
-console.log("Primer Ejercicio");
-parImpar(4);
-console.log("");
+   {
+      id: 3,
+      nombre: "pizza 4 Quesos",
+      precio: 1380,
+      ingredientes: [
+         "Muzzarella",
+         "Tomate",
+         "Queso Azul",
+         "Parmesano",
+         "Roquefort",
+      ],
+      imagen: "https://i.ibb.co/YXJ7Grw/4quesos.png",
+   },
 
-// 2- Crear una función que reciba dos números por parámetro e indique en consola que número es mayor, y si ninguno lo es, indicar por consola que son iguales.
+   {
+      id: 4,
+      nombre: "pizza Especial",
+      precio: 1000,
+      ingredientes: ["Muzzarella", "Tomate", "Rucula", "Jamón"],
+      imagen: "https://i.ibb.co/cTS1pKL/especial.png",
+   },
 
-function names(num1, num2) {
-   if (num1 > num2) {
-      console.log(`${num1} es mayor que ${num2}`);
-   } else if (num2 > num1) {
-      console.log(`${num2} es mayor que ${num1}`);
-   } else {
-      console.log(`${num1} y ${num2} son iguales`);
-   }
-}
+   {
+      id: 5,
+      nombre: "pizza con Anana",
+      precio: 600,
+      ingredientes: ["Muzzarella", "Tomate", "Anana"],
+      imagen: "https://i.ibb.co/3d2rF86/anana.png",
+   },
+];
+document.addEventListener("DOMContentLoaded", () => {
+   const pizzaContainer = document.getElementById("pizzaContainer");
+   const searchForm = document.getElementById("searchForm");
+   const pizzaIdInput = document.getElementById("pizzaId");
 
-
-console.log("Segundo Ejercicio");
-names(3, 5);
-console.log("");
-
-// 3- Crear una función que reciba un número por parámetro e indique en consola si ese número es múltiplo de 5.
-
-function name(multiple) {
-   if (multiple % 5 === 0) {
-      console.log(`Es multiplo de 5`);
-   } else {
-      console.log(`No es multiplo de 5`);
-   }
-}
-
-
-console.log("Tercer Ejercicio");
-name(5);
-console.log("");
-
-// 4- Crear una función que reciba un número por parámetro e imprima por consola todos los números desde el 0 hasta llegar a ese número.
-function imprimirNumerosHasta(numero) {
-   for (let i = 0; i <= numero; i++) {
-      console.log(i);
-   }
-}
-
-
-console.log("Cuarto Ejercicio");
-imprimirNumerosHasta(10);
-console.log("");
-
-
-
-// 5 - Crear una función que reciba una palabra y un número por parámetro e imprima por consola esa palabra la cantidad correspondiente al número indicado.
-function imprimirPalabraNTimes(palabra, cantidad) {
-   for (let i = 0; i < cantidad; i++) {
-      console.log(palabra);
-   }
-}
-
-
-console.log("Quinto Ejercicio");
-imprimirPalabraNTimes("Hola", 3); 
-console.log("");
-
-
-
-// 6 - Crear una función que reciba un array por parámetro e imprima por consola todos los valores de ese array.
-function imprimirArray(array) {
-   for (let i = 0; i < array.length; i++) {
-      console.log(array[i]);
-   }
-}
-
-
-console.log("Sexto Ejercicio");
-imprimirArray([1, 2, 3, 4, 5]);
-console.log(""); 
-
-
-
-// 7 - Crear una función que reciba un array con 10 números e imprima por consola todos los valores de ese array, menos el que se encuentre en la 5ta posición del mismo.
-function imprimirArraySinQuintoElemento(array) {
-   for (let i = 0; i < array.length; i++) {
-      if (i !== 4) {
-         console.log(array[i]);
+   // Cargar la última pizza buscada y renderizarla al cargar la página
+   const lastPizzaId = localStorage.getItem("lastPizzaId");
+   if (lastPizzaId) {
+      const lastPizza = pizzas.find((pizza) => pizza.id == lastPizzaId);
+      if (lastPizza) {
+         renderPizzaCard(lastPizza);
       }
    }
-}
 
-
-console.log("Septimo Ejercicio");
-imprimirArraySinQuintoElemento([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-console.log("");
-
-
-
-// 8 - Crea una función que reciba un array de números y un número por parámetro e imprima por consola cada número del array multiplicado por el número pasado por parámetro.
-function imprimirArrayMultiplicadoPorNumero(array, numero) {
-   for (let i = 0; i < array.length; i++) {
-      console.log(array[i] * numero);
+   // Función para renderizar una pizza en una card
+   function renderPizzaCard(pizza) {
+      pizzaContainer.innerHTML = `
+       <div class="card">
+         <h2>${pizza.nombre}</h2>
+         <img src="${pizza.imagen}" alt="${pizza.nombre}" class="pizza-image" />
+         <p>Precio: $${pizza.precio}</p>
+       </div>
+     `;
    }
-}
 
+   // Función para manejar la búsqueda de la pizza por ID
+   function searchPizzaById(pizzaId) {
+      const pizza = pizzas.find((pizza) => pizza.id == pizzaId);
+      if (pizza) {
+         // Renderizar la pizza encontrada
+         renderPizzaCard(pizza);
+         // Guardar el ID de la pizza buscada en localStorage
+         localStorage.setItem("lastPizzaId", pizzaId);
+      } else {
+         // Renderizar un mensaje de error si no se encuentra la pizza
+         pizzaContainer.innerHTML = `<p class="error">No se encontró ninguna pizza con el ID ${pizzaId}.</p>`;
+      }
+   }
 
-console.log("Octavo Ejercicio");
-imprimirArrayMultiplicadoPorNumero([1, 2, 3], 5);
+   // Manejar el evento submit del formulario de búsqueda
+   searchForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const pizzaId = pizzaIdInput.value.trim();
+      if (!pizzaId || isNaN(pizzaId)) {
+         // Renderizar un mensaje de error si no se ingresa un número
+         pizzaContainer.innerHTML = `<p class="error">Por favor, ingresa un número válido.</p>`;
+      } else {
+         searchPizzaById(pizzaId);
+      }
+   });
+});
